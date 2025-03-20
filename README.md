@@ -1,6 +1,6 @@
 # Pasos para ejecutar Sententia
 ---
-La GUI que usa Sententia fue construida en Flet, un framework de Python creado para el desarrollo facíl y práctico de distintas aplicaciones multiplataforma, en este estado de desarrollo, para poder usar Sententia debe:
+La GUI que usa Sententia fue construida en Flet, un framework de Python creado para el desarrollo facíl y práctico de distintas aplicaciones multiplataforma. En este estado de desarrollo, para poder usar Sententia debe:
 
 1. Crear y activar el entorno virtual de Python 
 
@@ -19,6 +19,7 @@ La GUI que usa Sententia fue construida en Flet, un framework de Python creado p
    ```
    
  2. Instalar flet
+
 Usuarios de Linux:
 Quizás sea necesario instalar varias librerías adicionales para hacer funcionar Flet. Consulte la [documentación oficial de Flet](https://flet.dev/docs/publish/linux/#prerequisites) para más detalles.
  
