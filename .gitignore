@@ -2,3 +2,6 @@ __pycache__/
 *.pyc
 *.pyo
 commits_register.txt
+
+abso-env
+.idea

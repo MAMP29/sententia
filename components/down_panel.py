@@ -2,9 +2,6 @@ import flet as ft
 from subcomponents.custom_chip import CustomChip
 from subcomponents.custom_button import ResultExcutionButton
 from moderation_logic.execution import Execution
-from moderation_logic.brute_force_method import BruteForceMethod
-from moderation_logic.dinamic_method import DinamicMethod
-from moderation_logic.greedy_method import GreedyMethod
 import datetime
 import time
 import os
@@ -20,9 +17,6 @@ class DownPanel(ft.Container):
         self.file_name = None
         self.file_content = None
 
-        self.brute_force_method = BruteForceMethod()
-        self.dinamic_method = DinamicMethod()
-        self.greedy_method = GreedyMethod()
 
         #self.expand = True
         self.execute_button = ft.ElevatedButton(
@@ -136,20 +130,21 @@ class DownPanel(ft.Container):
             # Resultados de los algoritmos
             resultados = {}
 
-            if self.brute_force_chip.is_selected == True:
+            if self.brute_force_chip.is_selected:
                 print("Ejecutando por fuerza bruta")
-
+                print(f"ESFUERZO QUE HAY {ejecucion.effort} ")
+                ejecucion.modci_fb(ejecucion.groups)
                 algoritmos_usados.append("Fuerza bruta")
                 print("---------------------------------------------------------")
 
-            if self.dinamic_chip.is_selected == True:
+            if self.dinamic_chip.is_selected:
                 print("Ejecutando por método dinamico")
 
 
                 algoritmos_usados.append("Método dinamico")
                 print("---------------------------------------------------------")
 
-            if self.greedy_chip.is_selected == True:
+            if self.greedy_chip.is_selected:
                 print("Ejecutando por método voraz")
 
 
